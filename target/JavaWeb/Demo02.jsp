@@ -28,36 +28,27 @@
                在特殊需求下，也会使用到同步
                      */
                     $.ajax({
-                        url : "servlet01.do",//访问后台servlet地址
+                        url : "servlet02.do",//访问后台servlet地址
                         // data : {
                         //     "key1" : "value1",
                         //     "key2" : "value2"
                         // },
                         type : "get", //请求方式
-                        dataType : "text", //从后台接收数据的方式 text或者json
-                        async : true,
+                        dataType : "json", //从后台接收数据的方式 text或者json
+                        // async : true,
                         success : function (data) {
                             //回调函数(后台执行完毕后才会执行)
                             //data：从后台响应回来的数据
-                            $("#msg").html(data)
+                            alert(data.str1);
                         }
                     })
-                    alert(123);
                 })
         })
     </script>
 </head>
 <body>
-<button id="djBtn">点击</button>
-<br/>
-<br/>
-<div id="msg" style="width: 200px;height: 200px;background-color: green">
 
-</div>
-<br/>
-<br/>
-<div style="width: 200px;height: 200px;background-color: green">
- only one
-</div>
+<button id="djBtn">点击</button>
+
 </body>
 </html>
