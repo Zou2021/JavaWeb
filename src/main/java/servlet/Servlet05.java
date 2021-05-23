@@ -19,21 +19,21 @@ public class Servlet05 extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("进入到学生模块相关操作");
         String path = request.getServletPath();
-        if("/student/add.do".equals(path)){
-            
-            add(request,response);
+        if ("/student/add.do".equals(path)) {
 
-        }else if ("/student/delete.do".equals(path)){
+            add(request, response);
 
-            delete(request,response);
+        } else if ("/student/delete.do".equals(path)) {
 
-        }else if ("/student/update.do".equals(path)){
+            delete(request, response);
 
-            update(request,response);
+        } else if ("/student/update.do".equals(path)) {
 
-        }else if ("/student/select.do".equals(path)){
+            update(request, response);
 
-            select(request,response);
+        } else if ("/student/select.do".equals(path)) {
+
+            select(request, response);
 
         }
     }

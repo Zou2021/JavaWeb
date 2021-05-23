@@ -20,7 +20,7 @@ public class Servlet02 extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         System.out.println("..");
 //        {"str1":"aaa","str2":"bbb"}
         String str = "{\"str1\":\"aaa\",\"str2\":\"bbb\"}";

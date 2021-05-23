@@ -1,6 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 	request.getServerPort() + request.getContextPath() + "/";
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/";
 %>
 <html>
 <head>
@@ -28,15 +28,15 @@
                在特殊需求下，也会使用到同步
                      */
                     $.ajax({
-                        url : "servlet02.do",//访问后台servlet地址
+                        url: "servlet02.do",//访问后台servlet地址
                         // data : {
                         //     "key1" : "value1",
                         //     "key2" : "value2"
                         // },
-                        type : "get", //请求方式
-                        dataType : "json", //从后台接收数据的方式 text或者json
+                        type: "get", //请求方式
+                        dataType: "json", //从后台接收数据的方式 text或者json
                         // async : true,
-                        success : function (data) {
+                        success: function (data) {
                             //回调函数(后台执行完毕后才会执行)
                             //data：从后台响应回来的数据
                             alert(data.str1);

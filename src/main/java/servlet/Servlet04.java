@@ -25,15 +25,15 @@ public class Servlet04 extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("....");
 
-        Student s1 = new Student("001","zou",21);
-        Student s2 = new Student("002","qi",21);
+        Student s1 = new Student("001", "zou", 21);
+        Student s2 = new Student("002", "qi", 21);
 //        {"s1":{"id":"?","name":"?","age":"?"}}
-        String str = "{\"s1\":{\"id\":\""+s1.getId()
-                +"\",\"name\":\""+s1.getName()
-                +"\",\"age\":\""+s1.getAge()
-                +"\"},\"s2\":{\"id\":\""+s2.getId()
-                +"\",\"name\":\""+s2.getName()
-                +"\",\"age\":\""+s2.getAge()+"\"}}";
+        String str = "{\"s1\":{\"id\":\"" + s1.getId()
+                + "\",\"name\":\"" + s1.getName()
+                + "\",\"age\":\"" + s1.getAge()
+                + "\"},\"s2\":{\"id\":\"" + s2.getId()
+                + "\",\"name\":\"" + s2.getName()
+                + "\",\"age\":\"" + s2.getAge() + "\"}}";
         PrintWriter out = response.getWriter();
         out.print(str);
         out.close();

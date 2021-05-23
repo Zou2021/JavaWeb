@@ -17,17 +17,17 @@ import java.io.PrintWriter;
 @WebServlet("/servlet03.do")
 public class Servlet03 extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doGet(request, response);
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         System.out.println("...");
 
-        Student s = new Student("001","zou",21);
+        Student s = new Student("001", "zou", 21);
 //        {"id":"?","name":"?","age":"?"}
-        String str = "{\"id\":\""+s.getId()+"\",\"name\":\""+s.getName()+"\",\"age\":\""+s.getAge()+"\"}";
+        String str = "{\"id\":\"" + s.getId() + "\",\"name\":\"" + s.getName() + "\",\"age\":\"" + s.getAge() + "\"}";
         PrintWriter out = response.getWriter();
         out.print(str);
         out.close();
